@@ -2,12 +2,9 @@ package snackBar;
 
 public class Snack{
     private static int maxId = 0;
-    private int id;
-    private int vID;
+    private int id , vID, quantity;
     private String name;
-    private int quantity;
     private double cost;
-    
 
     public Snack(String name,double cost, int quantity){
         maxId++;
@@ -58,12 +55,11 @@ public class Snack{
        this.quantity = this.quantity + quantity;
     }
     
-    public void buySnack(){
-        
-    }
 
-    public void getTotal(int quantity){
-        this.cost = this.cost * quantity;
+    public double purchaseItem(int quantity){
+        double total = this.cost * quantity;
+        this.quantity = this.quantity - quantity;
+        return total;
     }
 
 

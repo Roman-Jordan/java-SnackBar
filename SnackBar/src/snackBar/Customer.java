@@ -27,6 +27,6 @@ public class Customer{
     }
 
     public void setCOH(double adjust){
-        this.cashOnHand = this.cashOnHand + adjust;
+        this.cashOnHand = this.cashOnHand - adjust;
     }
 }
